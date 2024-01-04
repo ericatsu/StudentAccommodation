@@ -16,10 +16,9 @@
             <input class="form-control" type="search" placeholder="Search" aria-label="Search">
         </div>
         <div class="btn-toolbar mb-2 mb-md-0">
-
-            <div class="btn-group mr-2">
-                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href='index.php'">User Page</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href='login.php'">Logout</button>
+            <div class="btn-group mr-6">
+                <button type="button" class="btn btn-primary mr-2" onclick="window.location.href='./../index.php'">Student</button>
+                <button type="button" class="btn btn-primary" onclick="window.location.href='./../logout.php'">Logout</button>
             </div>
         </div>
     </div>

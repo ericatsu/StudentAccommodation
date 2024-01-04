@@ -18,18 +18,18 @@ if (isset($_SESSION['uid'])) {
 </head>
 
 <body>
-<section class="box">
+    <section class="box">
 
 
-    <form id="aform" action="login.php" method="post" class="form">
+        <form id="aform" action="login.php" method="post" class="form">
 
-        <input type="username" name="username" placeholder="Username" required class="login_body">
-        <input type="password" name="password" placeholder="Password" required class="login_body">
-        <button type="submit" name="login" value="Login" class="button">Login</button>
-        <p><input type="checkbox" value="remember-me" name="rememberMe"> Remember me </p>
+            <input type="username" name="username" placeholder="Username" required class="login_body">
+            <input type="password" name="password" placeholder="Password" required class="login_body">
+            <button type="submit" name="login" value="Login" class="button">Login</button>
+            <p><input type="checkbox" value="remember-me" name="rememberMe"> Remember me </p>
 
-    </form>
-</section>
+        </form>
+    </section>
 </body>
 
 </html>

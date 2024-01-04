@@ -6,11 +6,11 @@ $database_login = DB_DATABASE;
 $username_login = DB_USER;
 $password_login = DB_PASSWORD;
 
-$db_login = mysqli_connect($hostname_login, $username_login, $password_login, $database_login);
+
+$conn = new PDO("mysql:host=$hostname_login;dbname=$database_login", $username_login, $password_login);
+
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
-// Check the connection
-if (!$db_login) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+return $conn;
 ?>
