@@ -1,0 +1,73 @@
+*{
+    outline: none; border:none;
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    font-family: Helvetica;
+}
+
+.box{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size:cover;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(https://admission.ug.edu.gh/applying/sites/default/files/admissionsHomePage.png);
+    margin:auto;
+}
+
+form {
+    background-color: #e8eef8;
+    margin: 5% auto 5% auto; 
+    border: 1px solid #888; 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    background: #fff;
+}
+
+
+input[type=username], input[type=password] {
+    width: 100%;
+    padding: 15px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(87, 89, 220, 0.1);
+    background-color: rgb(240, 240, 240);
+}
+
+button {
+    background-color: #18196c;
+    color: white;
+    padding: 15px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 30px;
+
+}
+  
+input[type=submit]:hover {
+    background-color: #1e1f7f;
+}
+
+h3{
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+}
+
+p {
+    padding-top: 10px;
+    
+}
