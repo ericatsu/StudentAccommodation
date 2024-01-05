@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
+
 <body>
   <div class="container">
     <h1>Book Your Accommodation</h1>
@@ -15,6 +17,14 @@
       <div class="form-group">
         <label for="studentNo">Student Number</label>
         <input type="text" class="form-control" id="studentNo" name="studentNo" required>
+      </div>
+      <div class="form-group">
+        <label for="studentMiddleInitial">Middle Initial</label>
+        <input type="text" class="form-control" id="studentMiddleInitial" name="studentMiddleInitial">
+      </div>
+      <div class="form-group">
+        <label for="studentLastName">Last Name</label>
+        <input type="text" class="form-control" id="studentLastName" name="studentLastName">
       </div>
       <div class="form-group">
         <label for="studentFirstName">Name</label>
@@ -45,6 +55,18 @@
         </select>
       </div>
       <div class="form-group">
+        <label for="hallName">Hall Name</label>
+        <input type="text" class="form-control" id="hallName" name="hallName">
+      </div>
+      <div class="form-group">
+        <label for="apartmentNumber">Apartment Number</label>
+        <input type="text" class="form-control" id="apartmentNumber" name="apartmentNumber">
+      </div>
+      <div class="form-group">
+        <label for="leaseDuration">Lease Duration</label>
+        <input type="text" class="form-control" id="leaseDuration" name="leaseDuration">
+      </div>
+      <div class="form-group">
         <label for="accommodationDuration">Duration (in months)</label>
         <input type="number" class="form-control" id="accommodationDuration" name="accommodationDuration" min="1" max="12" required>
       </div>
@@ -73,4 +95,5 @@
     });
   </script>
 </body>
+
 </html>
