@@ -1,16 +1,17 @@
 <?php
-require_once('config.php');
-// Database Connection Details
-$hostname_login = DB_HOST;
-$database_login = DB_DATABASE;
-$username_login = DB_USER;
-$password_login = DB_PASSWORD;
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASSWORD', 'Qwerty@12');
+define('DB_DATABASE', 'studentaccommodation_db');
 
+$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
 
-$conn = new PDO("mysql:host=$hostname_login;dbname=$database_login", $username_login, $password_login);
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
 
-$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+// You can optionally set character set if needed
+mysqli_set_charset($conn, "utf8");
 
 return $conn;
 ?>

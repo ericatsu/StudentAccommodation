@@ -1,157 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Accommodation Application</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Form</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
-
 <body>
-
-    <div class="container mt-5">
-        <a href="../index.php"><h2>Student Accommodation Application</h2></a>
-    <form action="process_application.php" method="post">
-
-            <!-- Student Information Section -->
-            <div class="card mt-4">
-                <div class="card-header">
-                    Student Information
-                </div>
-                <div class="card-body">
-                    <div class="form-row">
-                        <div class="form-group col-md-4">
-                            <label for="studentNo">Student Number</label>
-                            <input type="text" class="form-control" id="studentNo" name="studentNo" required>
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="firstName">First Name</label>
-                            <input type="text" class="form-control" id="firstName" name="firstName" required>
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="middleInitial">Middle Initial</label>
-                            <input type="text" class="form-control" id="middleInitial" name="middleInitial">
-                        </div>
-                    </div>
-
-                    <!-- Add other student information fields here -->
-
-                </div>
-            </div>
-
-            <!-- Accommodation Preferences Section -->
-            <div class="card mt-4">
-                <div class="card-header">
-                    Accommodation Preferences
-                </div>
-                <div class="card-body">
-                    <div class="form-group">
-                        <label for="accommodationType">Accommodation Type Required</label>
-                        <select class="form-control" id="accommodationType" name="accommodationType" required>
-                            <option value="">Select Type</option>
-                            <option value="hall">Hall</option>
-                            <option value="apartment">Apartment</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="accommodationDuration">Accommodation Duration</label>
-                        <input type="text" class="form-control" id="accommodationDuration" name="accommodationDuration" required>
-                    </div>
-
-                    <!-- Add other accommodation preferences fields here -->
-
-                </div>
-            </div>
-
-            <!-- Additional Information for Hall Accommodation Section -->
-            <div class="card mt-4">
-                <div class="card-header">
-                    Additional Information for Hall Accommodation
-                </div>
-                <div class="card-body">
-                    <div class="form-group">
-                        <label for="hallName">Hall Name</label>
-                        <input type="text" class="form-control" id="hallName" name="hallName">
-                    </div>
-
-                    <!-- Add other hall-specific fields here -->
-
-                </div>
-            </div>
-
-            <!-- Additional Information for Apartment Accommodation Section -->
-            <div class="card mt-4">
-                <div class="card-header">
-                    Additional Information for Apartment Accommodation
-                </div>
-                <div class="card-body">
-                    <div class="form-group">
-                        <label for="apartmentNumber">Apartment Number</label>
-                        <input type="text" class="form-control" id="apartmentNumber" name="apartmentNumber">
-                    </div>
-
-                    <!-- Add other apartment-specific fields here -->
-
-                </div>
-            </div>
-
-            <!-- Lease Information Section -->
-            <div class="card mt-4">
-                <div class="card-header">
-                    Lease Information
-                </div>
-                <div class="card-body">
-                    <div class="form-group">
-                        <label for="leaseDuration">Lease Duration</label>
-                        <input type="text" class="form-control" id="leaseDuration" name="leaseDuration" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="leaseStartDate">Lease Start Date</label>
-                        <input type="date" class="form-control" id="leaseStartDate" name="leaseStartDate" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="leaseLeaveDate">Lease Leave Date</label>
-                        <input type="date" class="form-control" id="leaseLeaveDate" name="leaseLeaveDate">
-                    </div>
-
-                    <!-- Add other lease information fields here -->
-
-                </div>
-            </div>
-
-            <!-- Room Preferences Section -->
-            <div class="card mt-4">
-                <div class="card-header">
-                    Room Preferences
-                </div>
-                <div class="card-body">
-                    <div class="form-group">
-                        <label for="roomNumber">Room Number</label>
-                        <input type="text" class="form-control" id="roomNumber" name="roomNumber">
-                    </div>
-                    <div class="form-group">
-                        <label for="placeNumber">Place Number</label>
-                        <input type="text" class="form-control" id="placeNumber" name="placeNumber">
-                    </div>
-
-                    <!-- Add other room preferences fields here -->
-
-                </div>
-            </div>
-
-            <!-- Submit Button -->
-            <button type="submit" class="btn btn-primary mt-4">Submit Application</button>
-
-        </form>
-    </div>
-
-    <!-- Bootstrap JS and Popper.js -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
-
+  <div class="container">
+    <h1>Book Your Accommodation</h1>
+    <form action="booking.php" method="post">
+      <div class="form-group">
+        <label for="studentNo">Student Number</label>
+        <input type="text" class="form-control" id="studentNo" name="studentNo" required>
+      </div>
+      <div class="form-group">
+        <label for="studentFirstName">Name</label>
+        <input type="text" class="form-control" id="studentFirstName" name="studentFirstName" required>
+      </div>
+      <div class="form-group">
+        <label for="studentSex">Sex</label>
+        <select class="form-control" id="studentSex" name="studentSex" required>
+          <option value="">Select</option>
+          <option value="M">Male</option>
+          <option value="F">Female</option>
+          <option value="O">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="studentDOB">Date of Birth</label>
+        <input type="date" class="form-control" id="studentDOB" name="studentDOB" required>
+      </div>
+      <div class="form-group">
+        <label for="accommodationTypeRequired">Type of Accommodation</label>
+        <select class="form-control" id="accommodationTypeRequired" name="accommodationTypeRequired" required>
+          <option value="">Select</option>
+          <option value="Hall">Hall</option>
+          <option value="Hotels">Hotels</option>
+          <option value="Flat">Flat</option>
+          <option value="Self-Contain">Self-Contain</option>
+          <option value="Bangalow">Bangalow</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="accommodationDuration">Duration (in months)</label>
+        <input type="number" class="form-control" id="accommodationDuration" name="accommodationDuration" min="1" max="12" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Book Now</button>
+    </form>
+  </div>
+  <script>
+    $(document).ready(function() {
+      $("button[type='submit']").on("click", function(event) {
+        event.preventDefault();
+        // Get the user input from the form
+        var studentNo = $("#studentNo").val();
+        var name = $("#studentFirstName").val();
+        var sex = $("#studentSex").val();
+        var dob = $("#studentDOB").val();
+        var type = $("#accommodationTypeRequired").val();
+        var duration = $("#accommodationDuration").val();
+        // Validate the user input
+        if (studentNo == "" || name == "" || sex == "" || dob == "" || type == "" || duration == "") {
+          alert("Please fill in all the fields.");
+        } else {
+          alert("You have entered the following data:\nStudent Number: " + studentNo + "\nName: " + name + "\nSex: " + sex + "\nDate of Birth: " + dob + "\nType of Accommodation: " + type + "\nDuration: " + duration + "\nAre you sure you want to book now?");
+          $("form").submit();
+        }
+      });
+    });
+  </script>
 </body>
-
 </html>
