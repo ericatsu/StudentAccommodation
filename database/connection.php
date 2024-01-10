@@ -10,7 +10,6 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-// You can optionally set character set if needed
 mysqli_set_charset($conn, "utf8");
 
 return $conn;
