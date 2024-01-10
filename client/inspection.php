@@ -27,7 +27,7 @@
 
         <?php if ($inspectionDetails): ?>
             <!-- Display inspection details -->
-            <p>Dear <?php echo $inspectionDetails['apartmentNumber']; ?> Residents,</p>
+            <p>Dear <?php echo $inspectionDetails['apartNo']; ?> Residents,</p>
             <p>Below is the information on the upcoming inspection for your apartment:</p>
 
             <ul>

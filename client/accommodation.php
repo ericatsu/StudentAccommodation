@@ -6,25 +6,25 @@ require_once('../database/connection.php');
 $query = "
     SELECT
         'Apartment' AS accommodationType,
-        apartNo AS roomNumber,
+        apartNo AS roomNo,
         '' AS hallName,
-        apartAddress AS placeNumber,
+        apartAddress AS placeNo,
         noOfRoomsInApart AS monthlyRentalRate
     FROM apartment
     UNION
     SELECT
         'Hall' AS accommodationType,
-        '' AS roomNumber,
+        '' AS roomNo,
         hallName AS hallName,
-        '' AS placeNumber,
+        '' AS placeNo,
         noOfRoomsInHall AS monthlyRentalRate
     FROM hall
     UNION
     SELECT
         'Room' AS accommodationType,
-        roomNo AS roomNumber,
+        roomNo AS roomNo,
         hallName AS hallName,
-        placeNo AS placeNumber,
+        placeNo AS placeNo,
         rentPerSemester AS monthlyRentalRate
     FROM room
 ";
@@ -80,9 +80,9 @@ mysqli_close($db_login);
         foreach ($accommodations as $accommodation) {
             echo "<tr>";
             echo "<td>{$accommodation['accommodationType']}</td>";
-            echo "<td>{$accommodation['roomNumber']}</td>";
+            echo "<td>{$accommodation['roomNo']}</td>";
             echo "<td>{$accommodation['hallName']}</td>";
-            echo "<td>{$accommodation['placeNumber']}</td>";
+            echo "<td>{$accommodation['placeNo']}</td>";
             echo "<td>{$accommodation['monthlyRentalRate']}</td>";
             // Add more columns based on your database attributes
             echo "<td><a href='select_accommodation.php?id={$accommodation['id']}'>Select</a></td>";

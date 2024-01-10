@@ -1,15 +1,15 @@
 <?php
-// Include the necessary PHP files, configurations, or functions here
-// You may include the database connection file and any other required files
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-// Assume you have a function to fetch lease details based on leaseNo
+
+
 function fetchLeaseDetails($leaseNo) {
-    // Include your database connection
+    
     require_once('../database/connection.php');
 
-    // Fetch lease details from the database
     $query = "SELECT * FROM Lease WHERE leaseNo = ?";
-    $stmt = $db_login->prepare($query);
+    $stmt = $conn->prepare($query);
     $stmt->bind_param('s', $leaseNo);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -20,20 +20,20 @@ function fetchLeaseDetails($leaseNo) {
         $leaseDetails = $result->fetch_assoc();
     } else {
         // Handle the case where the query fails
-        echo "Error: " . $db_login->error;
+        echo "Error: " . $conn->error;
         // You might want to set $leaseDetails to an empty array or handle it as appropriate
         $leaseDetails = [];
     }
 
     // Close the database connection
     $stmt->close();
-    $db_login->close();
+    $conn->close();
 
     return $leaseDetails;
 }
 
 // Assume you have a lease number (replace '123' with the actual lease number)
-$leaseNo = '123';
+$leaseNo = '1';
 
 // Fetch lease details based on the lease number
 $leaseDetails = fetchLeaseDetails($leaseNo);
@@ -77,8 +77,8 @@ $leaseDetails = fetchLeaseDetails($leaseNo);
 
             <!-- Action Buttons -->
             <div class="mb-3">
-                <button type="button" class="btn btn-primary">Review and Sign</button>
-                <a href="index.php" class="btn btn-secondary">Back to Home</a>
+                <button type="button" href="../index.php" class="btn btn-primary">Review and Sign</button>
+                <a href="../index.php" class="btn btn-secondary">Back to Home</a>
             </div>
         <?php else: ?>
             <!-- Handle the case where leaseDetails is empty -->
