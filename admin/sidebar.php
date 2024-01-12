@@ -13,11 +13,11 @@
     <div class="col-md-3 col-lg-2 d-md-block bg-dark sidebar min-vh-100">
         <div class="position-sticky">
             <div class="text-center my-3">
-                    <i class="bi bi-list-task" style="font-size: 2rem; color: white;"> StudRecord</i>
-                </div>
+                <i class="bi bi-list-task" style="font-size: 2rem; color: white;"> StudRecord</i>
+            </div>
             <ul class="nav flex-column">
                 <?php
-                $menu_items = ['Dashboard', 'Add', 'Records', 'Company', 'Messages', 'Tasks', 'Products', 'Documents', 'Settings'];
+                $menu_items = ['Dashboard', 'Add', 'Records', 'User Activity', 'Messages', 'Tasks', 'Products', 'Documents', 'Settings'];
                 foreach ($menu_items as $index => $item) {
                     $id = "menu-item-" . $index;
                     echo "<li class='nav-item'>

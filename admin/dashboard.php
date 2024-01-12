@@ -43,6 +43,9 @@
             $("#menu-item-2").click(function() {
                 $("#content").load("allrecords.php");
             });
+            $("#menu-item-3").click(function() {
+                $("#content").load("user_activity.php");
+            });
         });
     </script>
 </body>
